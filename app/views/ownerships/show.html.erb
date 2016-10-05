@@ -26,3 +26,23 @@
     </div>
   </div>
 </div>
+
+<!-- A Ownership has many responses -->
+
+<div class="row">
+  <div class="col-md-12">
+    <ul class="list-group">
+      <li class="list-group-item list-group-item-info">
+        Responses
+      </li>
+
+      <% @ownership.responses.each do |response| %>
+        <li class="list-group-item">
+          <a href="/responses/<%= response.id %>">
+            <%= response.review_id %>
+          </a>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>

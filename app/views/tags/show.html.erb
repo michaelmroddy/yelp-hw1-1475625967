@@ -23,3 +23,23 @@
     </div>
   </div>
 </div>
+
+<!-- A Tag has many restaurant_tags -->
+
+<div class="row">
+  <div class="col-md-12">
+    <ul class="list-group">
+      <li class="list-group-item list-group-item-info">
+        Restaurant_tags
+      </li>
+
+      <% @tag.restaurant_tags.each do |restaurant_tag| %>
+        <li class="list-group-item">
+          <a href="/restaurant_tags/<%= restaurant_tag.id %>">
+            <%= restaurant_tag.restaurant_id %>
+          </a>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
